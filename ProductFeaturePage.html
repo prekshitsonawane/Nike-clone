@@ -1,0 +1,1758 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Passion+One");
+
+:root {
+  --main-color: #f60f20;
+  --secondary-color: #1b206e;
+  --highlight-color: #c4a2fc;
+  --text-color: #111;
+}
+#home > div > div.container > div > h1{
+  font-family: 'Passion One';
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.logo {
+  position: absolute;   
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+}
+
+.logo img {
+  width: 200px;
+  height: 90px;
+}
+
+/* .logo img {
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 90px;
+  -webkit-filter: drop-shadow(1px 1px 0 black) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 black) 
+           drop-shadow(-2px -2px  white);
+            } */
+
+/* NAVIGATION */
+.toggle {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--main-color)
+    url("./img/menu.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  z-index: 20;
+}
+
+.toggle.active {
+  background: var(--main-color)
+    url("./img/close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  position: relative;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.navigation ul li a {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--main-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 20px;
+}
+
+/*navigation-lnk*/
+
+.navigation-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the links */
+}
+
+.navigation-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-links ul li {
+  margin: 20px;
+}
+
+.navigation-links ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.navigation-links ul li a:hover {
+  color: var(--main-color);
+}
+
+
+.icons {
+  position: absolute;
+  top: 20px; 
+  right: 100px; 
+  display: flex;
+  gap: 30px; 
+}
+
+
+.cart-icon ion-icon, .wishlist-icon ion-icon {
+  font-size: 30px; 
+  color: black; 
+  transition: color 0.3s ease; 
+}
+
+
+.cart-icon:hover ion-icon {
+  color: green;
+}
+
+
+.wishlist-icon:hover ion-icon {
+  color: red; 
+}
+
+
+/* SECTIONS */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 20px 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+
+
+/*home sectiono*/
+section.home {
+    padding-top: 0;
+    margin-top: 50px;
+}
+
+section.home .container {
+  padding-top: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-text-style {
+  margin: 0;
+  padding: 0;
+  font-size: 20px; 
+  font-weight: 500; 
+  color: black; 
+}
+
+.custom-display2 {
+  font-size: 40px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  padding: 0 !important; /* Remove padding */
+  margin: 0; /* Remove any margin to ensure no space between */
+}
+
+.custom-text-style2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px; 
+  font-weight: 500; 
+  color: black; 
+}
+
+
+/* INTRO SECTION */
+section.intro {
+  padding-top: 100px;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.intro-content {
+  padding-left: 30px;
+  z-index: 10;
+  width: 100%;
+  gap: 60px;
+}
+
+
+
+/* Reference: https://stackoverflow.com/questions/43683187/how-can-i-create-custom-underline-or-highlight-for-text-in-html-or-css */
+.highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 50%,
+    var(--highlight-color) 50%
+  );
+  padding: 0 0.25rem;
+}
+
+.intro-img {
+  display: none;
+} 
+
+.serv{
+  margin-top: 100px;
+}
+
+
+/*video*/
+.video {
+  padding: 25px; /* Adjust the padding as needed */
+  
+}
+
+.embed-responsive {
+  padding: 10px; /* Padding inside the container */
+  box-sizing: border-box; /* Ensures padding doesn't mess up the container's size */
+}
+
+.embed-responsive-item {
+  width: 100%; /* Make sure the video fits the container */
+  height: 80%; /* Maintain aspect ratio */
+}
+
+
+
+
+/* SERVICES */
+/* .services {
+ 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  overflow-x: auto; 
+  text-align: center;
+}
+
+.services .service .icon img {
+  width: 200px;
+}
+
+.services .service {
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+.services .service p {
+  line-height: normal;
+  font-size: 1.1rem;
+  margin: 10px 0;
+} */
+              
+#scroll-shoe .container-fluid {
+  padding: 0; 
+}
+
+#scroll-shoe .d-flex {
+  display: flex;              
+  gap: 15px;                 
+           
+  padding: 10px 0;            
+  scrollbar-width: thin;    
+}
+
+#scroll-shoe .card {
+  min-width: 300px;           
+  flex-shrink: 0;             
+}
+
+#scroll-shoe .d-flex::-webkit-scrollbar {
+  height: 8px;               
+}
+
+#scroll-shoe .d-flex::-webkit-scrollbar-thumb {
+  background-color: #888;     
+  border-radius: 4px;         
+}
+
+#scroll-shoe .d-flex::-webkit-scrollbar-thumb:hover {
+  background-color: #555;     
+} 
+#bestseller-head {
+    font: 30px "Helvetica";
+    font-weight: 500;
+    position: relative;
+    left: 50px;
+}
+
+.bestseller {
+    justify-self: center;
+    align-self: center;
+}
+
+.bestseller-imgs {
+    display: flex;
+    width: 93vw;
+    justify-content: space-between;
+}
+
+.bestseller-imgs img {
+    width: 30vw;
+    height: auto;
+}
+
+.bestseller-imgs h5 {
+    font: 20px 'Helvetica';
+    position: relative; 
+    top: -16px;
+    font-weight: bold;
+}
+
+/* WORK */
+.portfolio {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 350px); /* Increase the width of the cards to 300px */
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .portfolio {
+    grid-template-columns: repeat(3, 250px); /* 2 cards per row on medium screens, increase size */
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    grid-template-columns: 1fr; /* One card per row on small screens */
+  }
+}
+
+.card {
+  background-color: #fff;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.color-circle:hover {
+    transform: scale(1.2);
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content p {
+    margin: 10px 0;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-actions .btn {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card-actions .btn:hover {
+    background-color: gr;
+}
+
+/* Add to Cart button */
+
+.add-to-cart:hover {
+    background-color: green;
+}
+
+/* Add to Wishlist button */
+
+.add-to-wishlist:hover {
+    background-color: red;
+}
+
+/* CONTACT */
+/* .contact {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+} */
+
+
+/* Container for the scroll section */
+#scroll-show {
+  padding: 0;
+  width: 100%; /* Ensures the container takes full width */
+  overflow: hidden; /* Prevents overflow outside the container */
+}
+
+/* Scrollable section */
+.scroll-shoe {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0; /* Adds some vertical padding */
+  scroll-snap-type: x mandatory;
+  width: 100%; /* Full width for the scroll section */
+}
+
+/* Title styles */
+.scroll-shoe .title h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.scroll-shoe .title p {
+  font-size: 20px;
+  color: #888;
+}
+
+/* Cards container, using flexbox */
+.scroll-shoe .scroll-shoe {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  width: 100%; /* Make sure it fills the container */
+}
+
+/* Flexbox container for card items */
+.d-flex {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Individual card styles */
+.scroll-shoe .card {
+  flex: 0 0 auto; /* Prevents cards from growing or shrinking */
+  width: 200px; /* Width for each card */
+  scroll-snap-align: center; /* Aligns cards in the center */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Card image styles */
+.scroll-shoe .card img {
+  width: 100%; /* Ensures image takes full width of the card */
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Content inside the card */
+.scroll-shoe .card-content {
+  padding: 15px;
+}
+
+/* Paragraph styles inside card content */
+.scroll-shoe .card-content p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* First paragraph inside card content */
+.scroll-shoe .card-content p:first-child {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+
+
+
+/*Footer*/
+footer {
+  display: flex;
+  margin: 25px 55px;
+}
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.fMenuTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.fList {
+  padding: 0;
+  list-style: none;
+}
+.fListItem {
+  margin-bottom: 8px;
+  color: rgb(94, 94, 94);
+  cursor: pointer;
+}
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fInput {
+  padding: 5px;
+  border: none;
+  outline: 1px solid #333;
+}
+.fButton {
+  padding: 6px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-left: 3px;
+}
+.fIcons {
+  display: flex;
+}
+.fIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+.copyright {
+  font-weight: 500;
+  font-size: 14px;
+}
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services .service {
+    box-shadow: none;
+  }
+
+  .services .service:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  
+}
+
+
+@media (min-width: 1068px) {
+  .intro-img {
+    display: block;  
+    bottom: 0;
+    right: 0;
+    height: 110%;
+  }
+
+  .navigation ul li a {
+    font-size: 2.3rem;
+  }
+
+
+  .services {
+    
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 150px; /* Reduce the logo size on smaller screens */
+  }
+
+  .intro-img img {
+    max-width: 100%; /* Make home image take full width on smaller screens */
+  }
+
+  .intro-content h2 {
+    font-size: 1.8rem; /* Reduce font size for better readability on smaller screens */
+  }
+
+  .intro-content p {
+    font-size: 1rem; /* Reduce paragraph size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 120px; /* Further reduce logo size for small mobile screens */
+  }
+
+  .intro-content h2 {
+    font-size: 1.5rem; /* Reduce headline size even more */
+  }
+
+  .intro-content p {
+    font-size: 0.9rem; /* Adjust paragraph font size for smaller devices */
+  }
+}
+
+    </style>
+
+    <!-- slider -->
+<style>
+.slider {
+    margin-top: 0;
+  position: relative;
+  width: 90vw;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  padding-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+/* .slide .content {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(229, 235, 243, 0.8);
+  color: #495b73;
+  padding: 1rem;
+  line-height: 1.3;
+}
+
+.slide .content h1 {
+  margin-bottom: 0.625rem;
+  color: #362a2b;
+  font-size: 1.5rem;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateY(-300px);
+  transition: all 0.7s ease-in-out;
+} */
+
+.slide:first-child {
+  background: url("./img/slide1.png") no-repeat
+    center top/cover;
+}
+
+.slide:nth-child(2) {
+  background: url("./img/slide2.jpg") no-repeat
+    center top/cover;
+}
+
+.slide:nth-child(3) {
+  background: url("./img/slide3.webp") no-repeat
+    center top/cover;
+}
+
+.slide:nth-child(4) {
+  background: url("./img/slide4.jpg") no-repeat
+    center top/cover;
+}
+
+.buttons button#prev {
+    font-size: 20px;
+  position: absolute;
+  top: 48%;
+  left: 1rem;
+}
+
+.buttons button#next {
+    font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+}
+
+.buttons button {
+  border: 2px solid #e5ebf3;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* @media (min-width: 640px) and (min-height: 640px) {
+  .slide .content {
+    bottom: 70px;
+    left: -600px;
+    width: 600px;
+    padding: 2rem;
+    line-height: 1.6;
+  }
+
+  .slide .content h1 {
+    font-size: 2rem;
+  }
+
+  .slide.current .content {
+    transform: translateX(600px);
+  }
+} */
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 120px; /* Further reduced size for smaller screens */
+  }
+
+  /* Adjustments for the navigation links */
+  .navigation ul li a {
+    font-size: 1.3rem; /* Slightly smaller for 768px screens */
+  }
+
+  .toggle {
+    width: 50px;
+    height: 50px;
+    background-size: 25px; /* Reduce toggle button size */
+  }
+
+  /* Intro Section */
+  .intro-content h2 {
+    font-size: 1.6rem; /* Reduced headline size */
+  }
+
+  .intro-content p {
+    font-size: 1rem; /* Smaller paragraph size */
+  }
+
+  /* Button adjustments for responsiveness */
+  .btn {
+    font-size: 1rem;
+    padding: 8px 25px;
+    margin: 15px 0;
+  }
+
+  /* Adjust spacing and images in various sections */
+  section {
+    padding: 0 15px;
+  }
+
+  .embed-responsive {
+    padding: 5px; /* Reduced padding for small screens */
+  }
+
+  .card img {
+    height: 200px; /* Reduced image size inside cards */
+  }
+
+  /* Footer adjustments */
+  .footerLeft {
+    padding: 30px;
+  }
+
+  .footerRight {
+    padding: 30px;
+  }
+
+  .fMenuTitle {
+    font-size: 18px; /* Reduced footer menu title size */
+  }
+
+  .fListItem {
+    font-size: 14px; /* Smaller footer list item size */
+  }
+}
+
+/* For smaller screens (425px and below) */
+@media (max-width: 425px) {
+  .logo img {
+    width: 100px; /* Further reduced logo size */
+  }
+
+  .navigation ul li a {
+    font-size: 1.2rem; /* Even smaller text */
+  }
+
+  .intro-content h2 {
+    font-size: 1.4rem; /* Adjusted for smaller screen sizes */
+  }
+
+  .intro-content p {
+    font-size: 0.9rem; /* Smaller text for smaller devices */
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 6px 20px;
+    margin: 10px 0;
+  }
+
+  .slider {
+    width: 100vw; /* Full width for smaller screens */
+    height: 60vh; /* Smaller height for smaller screens */
+  }
+
+  .slide img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr; /* One card per row for mobile screens */
+  }
+
+  .card {
+    width: 100%; /* Full width cards on mobile */
+  }
+
+  .card img {
+    height: 180px; /* Smaller image size for cards on mobile */
+  }
+
+  .portfolio .card-content p {
+    font-size: 0.9rem; /* Smaller text for card content */
+  }
+
+  .fMenuTitle {
+    font-size: 16px; /* Reduced font size for footer menu title */
+  }
+
+  .fListItem {
+    font-size: 12px; /* Smaller text for footer list items */
+  }
+
+  .footerLeft,
+  .footerRight {
+    padding: 20px; /* Reduced padding for footer */
+  }
+}
+
+/* For screens 1024px and below */
+@media (max-width: 1024px) {
+
+  body {
+  width: 100%;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+  
+  .logo img {
+    width: 150px; /* Slightly smaller logo size for medium-sized screens */
+  }
+
+  /* Adjustments for the navigation links */
+  .navigation ul li a {
+    font-size: 1.4rem; /* Adjusted font size for better readability on 1024px screens */
+  }
+
+  .toggle {
+    width: 60px;
+    height: 60px;
+    background-size: 30px; /* Adjust toggle button size for tablet view */
+  }
+
+  /* Intro Section */
+  .intro-content h2 {
+    font-size: 1.8rem; /* Slightly reduced headline size */
+  }
+
+  .intro-content p {
+    font-size: 1.1rem; /* Slightly smaller paragraph text */
+  }
+
+  /* Button adjustments for responsiveness */
+  .btn {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    margin: 15px 0;
+  }
+
+  /* Adjust spacing and images in various sections */
+  section {
+    padding: 0 20px; /* Moderate padding for better spacing */
+  }
+
+  .embed-responsive {
+    padding: 10px; /* Increased padding for better alignment */
+  }
+
+  .card img {
+    height: 220px; /* Slightly reduced image size inside cards */
+  }
+
+  /* Footer adjustments */
+  .footerLeft {
+    padding: 40px; /* Increased padding for footer on medium screens */
+  }
+
+  .footerRight {
+    padding: 40px; /* Increased padding for footer on medium screens */
+  }
+
+  .fMenuTitle {
+    font-size: 20px; /* Larger font for footer menu title */
+  }
+
+  .fListItem {
+    font-size: 16px; /* Slightly larger font size for footer list items */
+  }
+}
+
+    </style>
+    <title>Creative Agency</title>
+  </head>
+  <body>
+    <header >
+      
+      <div class="navigation-links">
+        <div class="logo"><img src="./img/nikelogo.jpg" alt=""></div>
+        <ul>
+          <li><a href="#new-featured">New & Featured</a></li>
+          <li><a href="#men">Men</a></li>
+          <li><a href="#women">Women</a></li>
+          <li><a href="#kids">Kids</a></li>
+          <li><a href="#sale">Sale</a></li>
+          <li><a href="#snkrs">SNKRS</a></li>
+        </ul>
+
+        <div class="icons">
+          <!-- Add to Cart Icon -->
+          <a href="#cart" class="cart-icon">
+            <ion-icon name="cart"></ion-icon>
+          </a>
+          <!-- Wishlist Icon -->
+          <a href="#wishlist" class="wishlist-icon">
+            <ion-icon name="heart"></ion-icon>
+          </a>
+        </div>
+      </div>
+      
+      <div class="toggle"></div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#work">Best Seller</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+        <div class="social-bar">
+          <ul>
+            <li>
+              <a href="https://facebook.com">
+                <img
+                  src="./img/facebook.png"target="_blank"alt=""/>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com">
+                <img src="./img/twitter.png"target="_blank"alt=""/>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com">
+                <img src="./img/instagram.png"target="_blank"alt=""/>
+              </a>
+            </li>
+          </ul>
+          <a href="mailto:you@email.com" class="email-icon">
+            <img src="./img/email.png"alt=""/>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="slider">
+                <div class="slide current">
+                  <!-- <div class="content">
+                    <h1>Slide One</h1>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+                      autem aliquam itaque libero delectus temporibus?
+                    </p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                  <!-- <div class="content">
+                    <h1>Slide Two</h1>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+                      autem aliquam itaque libero delectus temporibus?
+                    </p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                  <!-- <div class="content">
+                    <h1>Slide Three</h1>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+                      autem aliquam itaque libero delectus temporibus?
+                    </p>
+                  </div> -->
+                </div>
+                <div class="slide">
+                  <!-- <div class="content">
+                    <h1>Slide Four</h1>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
+                      autem aliquam itaque libero delectus temporibus?
+                    </p>
+                  </div> -->
+                </div>
+              </div>
+              <div class="buttons">
+                <button id="prev"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <button id="next"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+              </div>
+              <div class="container">
+                <p class="custom-text-style">Introduction to nike 24.7 Collection</p>
+                <div class="custom-display2">
+                  <h1 style="margin-bottom: 0; margin-top: 0;">TAILORED FOR <br> 
+                  ALL-DAY COMFORT</h1>
+                </div>
+                
+                <p class="custom-text-style2">A new collection featurig polished looks and a luxurious feel.</p>
+              </div>
+      </section>
+    <!--Intro-->
+    <section class="intro" id="intro" style="gap: 280px;">
+        <div class="intro-content">
+          <h2>
+            <span class="highlight">Nike</span> delivers innovative <br />
+            products, experiences and services to inspire <span class="highlight">athletes</span>.
+          </h2>
+          <p>
+            Welcome to Nike, where sport meets innovation. Our mission is to bring inspiration and innovation to every athlete in the world. Whether you're pushing your limits or simply enjoying the game, we're here to support your journey with cutting-edge gear and performance-driven style. Join us and unlock your potential.
+          </p>
+          <a href="#services" class="btn">Get Started</a>
+        </div>
+        <div class="intro-img">
+          <img src="./img/nikehome.jpg" alt="" style="width: 500px; height: auto;" />
+        </div>
+      </section>
+    <!-- Video -->
+    <section class="video">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" autoplay muted loop>
+          <source src="./img/Nike Esports  CAMP NEXT LEVEL 2020.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+   
+    <!-- work -->
+    <section id="work"> 
+        <div class="title" style=" padding-right: 10px; padding-bottom: 0; font-size:30px;">
+          <h1>Some of our finest work</h1>
+          <p style="font-size: 20px;">
+            Crafted for performance, built for excellence. Every detail designed to elevate your game. Explore our finest work and make it yours today.
+          </p>
+        </div>
+        <div class="portfolio" style="width: 100%;">
+          <!-- Product 1 -->
+          <div class="card">
+              <img src="./img/s1.png" alt="Product 1" id="product1-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: #f60f20;" onclick="changeImage('product1-image', './img/s1.png')"></span>
+                  <span class="color-circle" style="background-color: #F88379;" onclick="changeImage('product1-image', './img/Nike Alphafly 3 Premium/peach.png')"></span>
+                  <span class="color-circle" style="background-color: rgb(0, 225, 255);" onclick="changeImage('product1-image', './img/Nike Alphafly 3 Premium/blue.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike Alphafly 3 Premium</p>
+                  <p>$19.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 2 -->
+          <div class="card">
+              <img src="./img/s2.png" alt="Product 2" id="product2-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: white;" onclick="changeImage('product2-image', './img/s2.png')"></span>
+                  <span class="color-circle" style="background-color: black;" onclick="changeImage('product2-image', './img/nike air max 1/black.png')"></span>
+                  <span class="color-circle" style="background-color: #a9dafd;" onclick="changeImage('product2-image', './img/nike air max 1/whitesmoke.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike Air Max 1 '86 OG G</p>
+                  <p>$29.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 3 -->
+          <div class="card">
+              <img src="./img/s3.png" alt="Product 3" id="product3-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: rgb(21, 211, 236);" onclick="changeImage('product3-image', './img/s3.png')"></span>
+                  <span class="color-circle" style="background-color: rgb(255, 11, 161);" onclick="changeImage('product3-image', './img/Nike G.T. Hustle 3 Blueprint EP/pink.png')"></span>
+                  <span class="color-circle" style="background-color: rgb(253, 196, 7);" onclick="changeImage('product3-image', './img/Nike G.T. Hustle 3 Blueprint EP/yellow.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike G.T. Hustle 3 'Paige Bueckers' EP</p>
+                  <p>$39.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 4 -->
+          <div class="card">
+              <img src="./img/s4.png" alt="Product 4" id="product4-image" />
+              
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: white;" onclick="changeImage('product4-image', './img/s4.png')"></span>
+                  <span class="color-circle" style="background-color: #ff1a1a;" onclick="changeImage('product4-image', './img/Nike Court Legacy Lift/red.jfif')"></span>
+                  <span class="color-circle" style="background-color: #FFFDD0;" onclick="changeImage('product4-image', './img/Nike Court Legacy Lift/yellow.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike Court Legacy Lift</p>
+                  <p>$49.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 5 -->
+          <div class="card">
+              <img src="./img/s5.png" alt="Product 5" id="product5-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: palevioletred;" onclick="changeImage('product5-image', './img/s5.png')"></span>
+                  <span class="color-circle" style="background-color: blue;" onclick="changeImage('product5-image', './img/Nike Air Max 90 SE/blue.png')"></span>
+                  <span class="color-circle" style="background-color: rgb(248, 224, 7);" onclick="changeImage('product5-image', './img/Nike Air Max 90 SE/yellow.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike Air Max 90 SE</p>
+                  <p>$59.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 6 -->
+          <div class="card">
+              <img src="./img/s6.png" alt="Product 6" id="product6-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: #0099cc;" onclick="changeImage('product6-image', './img/s6.png')"></span>
+                  <span class="color-circle" style="background-color: black;" onclick="changeImage('product6-image', './img/Air Jordan 1 Mid/black.jfif')"></span>
+                  <span class="color-circle" style="background-color: white;" onclick="changeImage('product6-image', './img/Air Jordan 1 Mid/white.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Air Jordan 1 Mid</p>
+                  <p>$69.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 7 -->
+          <div class="card">
+              <img src="./img/s7.png" alt="Product 7" id="product7-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: black;" onclick="changeImage('product7-image', './img/s7.png')"></span>
+                  <span class="color-circle" style="background-color: rgb(0, 140, 255);" onclick="changeImage('product7-image', './img/Nike Tiempo Legend 10 Club/blue.png')"></span>
+                  <span class="color-circle" style="background-color: #FF1C3E;" onclick="changeImage('product7-image', './img/Nike Tiempo Legend 10 Club/pink.png')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Nike Tiempo Legend 10 Club</p>
+                  <p>$79.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Product 8 -->
+          <div class="card">
+              <img src="./img/s8.png" alt="Product 8" id="product8-image" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: red;" onclick="changeImage('product8-image', './img/s8.png')"></span>
+                  <span class="color-circle" style="background-color: black" onclick="changeImage('product8-image', './img/Sabrina 2 EP/black.jfif')"></span>
+                  <span class="color-circle" style="background-color: rgb(217, 100, 233);" onclick="changeImage('product8-image', './img/Sabrina 2 EP/purple.jfif')"></span>
+              </div>
+              <div class="card-content">
+                  <p>Sabrina 2 EP</p>
+                  <p>$89.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+          <!--
+          <div class="card">
+              <img src="./img/s9.png" alt="Product 9" />
+              <div class="color-options">
+                  <span class="color-circle" style="background-color: #ff6347;"></span>
+                  <span class="color-circle" style="background-color: #2d2d2d;"></span>
+                  <span class="color-circle" style="background-color: #bada55;"></span>
+              </div>
+              
+              <div class="card-content">
+                  <p>Product 9</p>
+                  <p>$99.99</p>
+                  <div class="card-actions">
+                      <a href="#" class="btn add-to-cart"><ion-icon name="cart-outline"></ion-icon>Add to Cart</a>
+                      <a href="#" class="btn add-to-wishlist"><ion-icon name="heart"></ion-icon>Add to Wishlist</a>
+                  </div>
+              </div>
+          </div>
+  
+          
+          <div class="card">
+            <img src="./img/s10.png" alt="Product 10" />
+            <div class="card-content">
+              <p>Product 10</p>
+              <p>$109.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s11.png" alt="Product 11" />
+            <div class="card-content">
+              <p>Product 11</p>
+              <p>$119.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s12.png" alt="Product 12" />
+            <div class="card-content">
+              <p>Product 12</p>
+              <p>$129.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s13.png" alt="Product 13" />
+            <div class="card-content">
+              <p>Product 13</p>
+              <p>$139.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s14.png" alt="Product 14" />
+            <div class="card-content">
+              <p>Product 14</p>
+              <p>$149.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s15.png" alt="Product 15" />
+            <div class="card-content">
+              <p>Product 15</p>
+              <p>$159.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./img/s16.png" alt="Product 16" />
+            <div class="card-content">
+              <p>Product 16</p>
+              <p>$169.99</p>
+              <a href="#" class="buy-btn">Buy</a>
+            </div>
+          </div> -->
+        </div>
+        
+        
+      </section>
+    
+      
+       <!-- services -->
+    <section id="services" class="serv">
+        <!-- <div class="title" style="  padding-right: 10px; padding-bottom: 0; font-size:30px; padding-left: 160px;">
+          <h1>Services that we can help you with</h1>
+          <p style="font-size: 20px;">
+            From personalized fitting to expert training advice, we’re here to help you perform at your best. Get expert guidance on gear, style, and technique. Let us help you reach your full potential today. These are some of the shoes that can take you there.
+          </p>
+        </div> -->
+         <!-- <div class="service">
+             <div class="icon">
+              <img src="./img/shoe1.png"alt=""/>
+            </div>
+            <h3>NIKE AIR MAX DN </h3>
+            <p>Sleek design with visible Air cushioning for maximum comfort. Combines style and performance in a lightweight, durable sneaker.</p>
+          </div>
+          <div class="service">
+            <div class="icon">
+              <img src="./img/shoe2.png"alt=""/>
+            </div>
+            <h3>AIR MAX 90</h3>
+            <p>Classic design with visible Air cushioning for comfort and durability. Iconic style that stands out with every step.</p>
+          </div>
+          <div class="service">
+            <div class="icon">
+              <img src="./img/shoe3.png"alt=""/>
+            </div>
+            <h3>CORTEX</h3>
+            <p>Lightweight and breathable with responsive cushioning for all-day comfort. Sleek design perfect for both performance and casual wear.</p>
+          </div>
+          <div class="service">
+            <div class="icon">
+              <img src="./img/shoe4.png"alt=""/>
+            </div>
+            <h3>KILLSHOT</h3>
+            <p>Retro-inspired with premium leather and suede for style and durability. A versatile, lightweight sneaker for everyday wear.</p>
+          </div>
+          <div class="service">
+            <div class="icon">
+              <img src="./img/shoe5.png"alt=""/>
+            </div>
+            <h3>PEGASUS 41</h3>
+            <p>Zoom Air cushioning delivers a responsive, cushioned ride. Breathable upper and secure fit for every run.</p>
+          </div>
+          <div class="service">
+            <div class="icon">
+              <img src="./img/shoe6.png"alt=""/>
+            </div>
+            <h3>VOMERO</h3>
+            <p>Responsive Zoom Air units provide a smooth, cushioned feel. Breathable upper and durable outsole for long-lasting performance.</p>
+          </div> --> 
+          <div class="flex-wrap bestseller-wrap">
+            <h3 id="bestseller-head">Best Seller</h3>
+            <div class="bestseller" style="padding-left: 50px;">
+                <div class="bestseller-imgs">
+                    <div class="bestseller-img">
+                        <img src="img/bestseller_1.png">
+                        <h5>Shop Women's</h3>
+                    </div>
+                    <div class="bestseller-img">
+                        <img src="img/bestseller_2.png">
+                        <h5>Shop Men's</h3>
+                    </div>
+                    <div class="bestseller-img">
+                        <img src="img/bestseller_3.png">
+                        <h5>Shop Kids'</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </section>
+      
+    <!-- scroll -->
+    <section id="scroll-show" style="overflow-x: auto; margin-bottom: 0;"> 
+      <div class="title" style="padding-right: 10px; padding-bottom: 0; font-size:30px; position:absolute;">
+        <h1> Classics Spotlight</h1>
+        <p style="font-size: 20px;">
+          Crafted for performance, built for excellence. Every detail designed to elevate your game. Explore our finest work and make it yours today.
+        </p>
+      </div>
+    
+      <div class="scroll-shoe" style="width: 100%; margin-top: 200px; margin-bottom: 0;">
+        <div class="d-flex">
+          <div class="card" >
+            <img src="./img/s1.png" alt="Product 1" />
+            <div class="card-content">
+              <p>Product 1</p>
+              <p>$19.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s2.png" alt="Product 2" />
+            <div class="card-content">
+              <p>Nike Air Max 1 '86 OG G</p>
+              <p>$29.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s3.png" alt="Product 3" />
+            <div class="card-content">
+              <p>Product 3</p>
+              <p>$39.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s4.png" alt="Product 4" />
+            <div class="card-content">
+              <p>Product 4</p>
+              <p>$49.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s5.png" alt="Product 5" />
+            <div class="card-content">
+              <p>Product 5</p>
+              <p>$59.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s6.png" alt="Product 6" />
+            <div class="card-content">
+              <p>Product 6</p>
+              <p>$69.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s7.png" alt="Product 7" />
+            <div class="card-content">
+              <p>Product 7</p>
+              <p>$79.99</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="./img/s8.png" alt="Product 8" />
+            <div class="card-content">
+              <p>Product 8</p>
+              <p>$89.99</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+
+    <footer id="footer">
+        <!-- Footer Left  -->
+        <div class="footerLeft">
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">About Us</h1>
+            <ul class="fList">
+              <li class="fListItem">Stores</li>
+              <li class="fListItem">Company</li>
+              <li class="fListItem">Contact</li>
+              <li class="fListItem">Careers</li>
+              <li class="fListItem">Affiliates</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">Useful Links</h1>
+            <ul class="fList">
+              <li class="fListItem">FAQ's</li>
+              <li class="fListItem">Refund</li>
+              <li class="fListItem">Stories</li>
+              <li class="fListItem">Support</li>
+              <li class="fListItem">Feedback</li>
+            </ul>
+          </div>
+          <div class="footerMenu">
+            <h1 class="fMenuTitle">Products</h1>
+            <ul class="fList">
+              <li class="fListItem">Force</li>
+              <li class="fListItem">Blazer</li>
+              <li class="fListItem">Crater</li>
+              <li class="fListItem">Hippie</li>
+              <li class="fListItem">Air Jordan</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Footer Right  -->
+        <div class="footerRight">
+          <div class="footerRightMenu">
+            <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+            <div class="fMail">
+              <input type="text" placeholder="your@email.com" class="fInput" />
+              <button class="fButton">Join Now</button>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <h1 class="fMenuTitle">Follow Us</h1>
+            <div class="fIcons">
+              <a href="#" target="_blank"
+                ><img src="./img/linkedin.png" class="fIcon"
+              /></a>
+              <a href="#" target="_blank"
+                ><img src="./img/github.png" class="fIcon"
+              /></a>
+              <a href="#" target="_blank"
+                ><img src="./img/twitter.png" class="fIcon"
+              /></a>
+            </div>
+          </div>
+          <div class="footerRightMenu">
+            <span class="copyright"
+              >© 2022
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/geekyprashant/"
+                target="_blank"
+                >GeekyPrashant</a
+              >, All Rights Reserved</span
+            >
+          </div>
+        </div>
+      </footer>
+    
+
+    <script>
+        const toggleButton = document.querySelector(".toggle");
+const navigation = document.querySelector(".navigation");
+
+toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("active");
+  navigation.classList.toggle("active");
+});
+
+navigation.addEventListener("click", () => {
+  toggleButton.classList.toggle("active");
+  navigation.classList.toggle("active");
+});
+
+    </script>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
+const auto = true;
+const intervalTime = 5000;
+let slideInterval;
+
+const nextSlide = () => {
+  const current = document.querySelector(".current");
+  current.classList.remove("current");
+  if (current.nextElementSibling) {
+    current.nextElementSibling.classList.add("current");
+  } else {
+    slides[0].classList.add("current");
+  }
+};
+
+const prevSlide = () => {
+  const current = document.querySelector(".current");
+  current.classList.remove("current");
+  if (current.previousElementSibling) {
+    current.previousElementSibling.classList.add("current");
+  } else {
+    slides[slides.length - 1].classList.add("current");
+  }
+};
+
+nextButton.addEventListener("click", () => {
+  nextSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+prevButton.addEventListener("click", () => {
+  prevSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+
+if (auto) {
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+    </script>
+    <script>
+      function changeImage(imgId, newSrc) {
+          document.getElementById(imgId).src = newSrc;
+      }
+  </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
